@@ -105,6 +105,12 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
+if(mouseIsPressed){
+  spelerY=spelerY-10;
+}
+else{
+  spelerY=spelerY+10;
+}
 
 };
 
