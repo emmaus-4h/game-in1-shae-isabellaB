@@ -80,7 +80,14 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
   fill("yellow");
-  ellipse(x, y, 70, 70);
+  ellipse(300, 300, 100, 100);
+  fill("white");
+  ellipse(350, 275, 40, 40);
+  rect(225, 300, 50, 25);
+  strokeWeight(15);
+  stroke(0, 0, 0);
+  line(40, 80, 50, 80);
+  
 };
 
 
