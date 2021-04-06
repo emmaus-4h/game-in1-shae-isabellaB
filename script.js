@@ -125,7 +125,7 @@ else{
  * Zoekt uit of de vijand is geraakt
  * @returns {boolean} true als vijand is geraakt
  */
-var checkBuisdGeraakt = function() {
+var checkBuisGeraakt = function() {
 
   return false;
 };
@@ -178,7 +178,7 @@ function draw() {
       beweegKogel();
       beweegSpeler();
       
-      if (checkVijandGeraakt()) {
+      if (checkBuisGeraakt()) {
         // punten erbij
         // nieuwe vijand maken
       }
