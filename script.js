@@ -57,7 +57,8 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenBuis = function(x, y) {
-    
+    fill(0,0,0);
+    rect(600, 400, 50, 600);
 
 };
 
