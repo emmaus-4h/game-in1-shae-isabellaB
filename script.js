@@ -28,8 +28,8 @@ var spelerY = 300; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var buisX = 0;   // x-positie van vijand
+var buisY = 0;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -56,7 +56,7 @@ var tekenVeld = function () {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenVijand = function(x, y) {
+var tekenBuis = function(x, y) {
     
 
 };
@@ -94,7 +94,7 @@ var tekenSpeler = function(x, y) {
 /**
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
-var beweegVijand = function() {
+var beweegBuis = function() {
     
 };
 
@@ -125,7 +125,7 @@ else{
  * Zoekt uit of de vijand is geraakt
  * @returns {boolean} true als vijand is geraakt
  */
-var checkVijandGeraakt = function() {
+var checkBuisdGeraakt = function() {
 
   return false;
 };
@@ -174,7 +174,7 @@ function setup() {
 function draw() {
   switch (spelStatus) {
     case SPELEN:
-      beweegVijand();
+      beweegBuis();
       beweegKogel();
       beweegSpeler();
       
@@ -189,7 +189,7 @@ function draw() {
       }
 
       tekenVeld();
-      tekenVijand(vijandX, vijandY);
+      tekenBuis(buisX, buisY);
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
