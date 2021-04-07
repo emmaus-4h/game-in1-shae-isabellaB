@@ -48,6 +48,13 @@ var score = 0; // aantal behaalde punten
 var tekenVeld = function () {
   fill("darkblue");
   rect(20, 20, width - 2 * 20, height - 2 * 20);
+  fill("darkgreen");
+  ellipse(300,900,950);
+  fill(0,200,50);
+  ellipse(900,900,950);
+  fill(255,255,255)
+  ellipse(950,200,200);
+  
 };
 
 
@@ -58,7 +65,7 @@ var tekenVeld = function () {
  */
 var tekenBuis = function(x, y) {
     fill(0,0,0);
-    rect(600, 400, 50, 600);
+    rect(600, 400, 100, 600);
 
 };
 
