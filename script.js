@@ -65,8 +65,8 @@ var tekenVeld = function () {
  */
 var tekenBuis = function(x, y) {
     fill(0,0,0);
-    rect(600, 400, 100, 600);
-
+    rect(600, 400, 50, 500);
+    rect(600, 35, 50, 150);
 };
 
 
