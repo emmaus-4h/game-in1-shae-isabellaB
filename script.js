@@ -64,9 +64,14 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenBuis = function(x, y) {
+    // eerste buis
     fill(0,0,0);
     rect(600, 400, 50, 500);
     rect(600, 35, 50, 150);
+    // tweede buis
+    fill(0,0,0);
+    rect(900, 20, 50, 250);
+    rect(900, 515, 50, 200);
 };
 
 
@@ -103,6 +108,8 @@ var tekenSpeler = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegBuis = function() {
+        
+  
     
 };
 
