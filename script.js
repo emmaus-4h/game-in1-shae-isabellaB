@@ -66,12 +66,12 @@ var tekenVeld = function () {
 var tekenBuis = function(x, y) {
     // eerste buis
     fill(0,0,0);
-    rect(buisX, 400, 50, 500);
-    rect(buisX, 35, 50, 150);
+    rect(buisX, buisY+400, 50, 500);
+    rect(buisX, buisY+35, 50, 150);
     // tweede buis
     fill(0,0,0);
-    rect(buisX+300, 20, 50, 250);
-    rect(buisX+300, 515, 50, 200);
+    rect(buisX+300, buisY+20, 50, 250);
+    rect(buisX+300, buisY+515, 50, 200);
 };
 
 
