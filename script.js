@@ -135,10 +135,10 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
 if(mouseIsPressed&&spelerY>=0){
-  spelerY=spelerY-10;
+  spelerY=spelerY-7;
 }
 else{
-  spelerY=spelerY+10;
+  spelerY=spelerY+7;
 }
 };
 
