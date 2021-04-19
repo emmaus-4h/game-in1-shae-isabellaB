@@ -72,7 +72,12 @@ var tekenBuis = function(x, y) {
     fill(0,0,0);
     rect(buisX+300, buisY+20, 50, 250);
     rect(buisX+300, buisY+515, 50, 200);
+    //derde buis
+    fill(0, 0, 0);
+    rect(buisX+600, buisY+20, 50, 150);
+    rect(buisX+600, buisY+450, 50, 300);
 };
+ 
 
 
 /**
