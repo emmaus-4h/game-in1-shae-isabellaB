@@ -75,8 +75,13 @@ var tekenBuis = function(x, y) {
     //derde buis
     fill(0, 0, 0);
     rect(buisX+600, buisY+20, 50, 150);
-    rect(buisX+600, buisY+450, 50, 300);
+    rect(buisX+600, buisY+450, 50, 300
+     );
+     //vierde buis
+    rect(buisX+900, buisY+20, 50, 300);
+    rect(buisX+900, buisY+550, 50, 200);
 };
+
  
 
 
