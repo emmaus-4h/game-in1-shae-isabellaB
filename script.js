@@ -28,8 +28,15 @@ var spelerY = 300; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var buisX = 1200;   // x-positie van vijand
-var buisY = 0;   // y-positie van vijand
+var buisX1 = 1200;   // x-positie van vijand
+var buisY1 = 0;   // y-positie van vijand
+var buisX2 = 1200+300;   // x-positie van vijand
+var buisY2 = 0;   // y-positie van vijand
+var buisX3 = 1200+600;   // x-positie van vijand
+var buisY3 = 0;   // y-positie van vijand
+var buisX4 = 1200+900;   // x-positie van vijand
+var buisY4 = 0;   // y-positie van vijand
+var buizenX = [1300,1200,1700,2200];
 
 var score = 0; // aantal behaalde punten
 
@@ -63,23 +70,29 @@ var tekenVeld = function () {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenBuis = function(x, y) {
+var tekenBuizen = function() {
     // eerste buis
     fill(0,0,0);
-    rect(buisX, buisY+400, 50, 500);
-    rect(buisX, buisY+35, 50, 150);
+    rect(buisX1, buisY1+400, 50, 500);
+    rect(buisX1, buisY1+35, 50, 150);
     // tweede buis
     fill(0,0,0);
-    rect(buisX+300, buisY+20, 50, 250);
-    rect(buisX+300, buisY+515, 50, 200);
+    rect(buisX2, buisY2+20, 50, 250);
+    rect(buisX2, buisY2+515, 50, 200);
     //derde buis
     fill(0, 0, 0);
-    rect(buisX+600, buisY+20, 50, 150);
-    rect(buisX+600, buisY+450, 50, 300
+    rect(buisX3, buisY3+20, 50, 150);
+    rect(buisX3, buisY3+450, 50, 300
      );
      //vierde buis
-    rect(buisX+900, buisY+20, 50, 300);
-    rect(buisX+900, buisY+550, 50, 200);
+    rect(buisX4, buisY4+20, 50, 300);
+    rect(buisX4, buisY4+550, 50, 200);
+
+for (var i=0; i<buizenX.length; i=i+1) {
+  fill("red")
+    rect(buizenX[i], 100+20, 50, 300);
+    rect(buizenX[i], 100+550, 50, 200);
+}
 };
 
  
@@ -118,10 +131,25 @@ var tekenSpeler = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegBuis = function() {
-  if(buisX>-1000){
-    buisX=buisX-5
+  if(buisX1>-1000){
+    buisX1=buisX1-5
+  }
+    if(buisX2>-1000){
+    buisX2=buisX2-5
+  }
+    if(buisX3>-1000){
+    buisX3=buisX3-5
+  }
+    if(buisX4>-1000){
+    buisX4=buisX4-5
   }
   
+  for (var i=0; i<buizenX.length; i=i+1) {
+    if(buizenX[i]>-1000){
+    buizenX[i]=buizenX[i]-5
+  }
+  }
+
     
 };
 
@@ -216,7 +244,7 @@ function draw() {
       }
 
       tekenVeld();
-      tekenBuis(buisX, buisY);
+      tekenBuizen();
       tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
