@@ -37,6 +37,7 @@ var buisY3 = 0;   // y-positie van vijand
 var buisX4 = 1200+900;   // x-positie van vijand
 var buisY4 = 0;   // y-positie van vijand
 var buizenX = [1300,1200,1700,2200];
+var buizenY = [20,20,30,40]
 
 var score = 0; // aantal behaalde punten
 
@@ -88,10 +89,12 @@ var tekenBuizen = function() {
     rect(buisX4, buisY4+20, 50, 300);
     rect(buisX4, buisY4+550, 50, 200);
 
+for(var j=0;j<buizenY.length;j=j+1){
 for (var i=0; i<buizenX.length; i=i+1) {
   fill("red")
-    rect(buizenX[i], 100+20, 50, 300);
-    rect(buizenX[i], 100+550, 50, 200);
+    rect(buizenX[i], buizenY[j], 50, 300);
+    rect(buizenX[i], buizenY[j]+300, 50, 300);
+}
 }
 };
 
