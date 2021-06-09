@@ -25,9 +25,6 @@ var spelStatus = SPELEN;
 var spelerX = 500; // x-positie van speler
 var spelerY = 300; // y-positie van speler
 
-var kogelX = 0;    // x-positie van kogel
-var kogelY = 0;    // y-positie van kogel
-
 var buisX1 = 1200;   // x-positie van vijand
 var buisY1 = 0;   // y-positie van vijand
 var buisX2 = 1200+300;   // x-positie van vijand
@@ -36,8 +33,8 @@ var buisX3 = 1200+600;   // x-positie van vijand
 var buisY3 = 0;   // y-positie van vijand
 var buisX4 = 1200+900;   // x-positie van vijand
 var buisY4 = 0;   // y-positie van vijand
-var buizenX = [1300,1200,1700,2200];
-var buizenY = [20,20,30,40]
+var buizenX = [1100,1200,1700,2200];
+var buizenY = [20,210,30,90]
 
 var score = 0; // aantal behaalde punten
 
@@ -98,18 +95,6 @@ for (var i=0; i<buizenX.length; i=i+1) {
 }
 };
 
- 
-
-
-/**
- * Tekent de kogel of de bal
- * @param {number} x x-coördinaat
- * @param {number} y y-coördinaat
- */
-var tekenKogel = function(x, y) {
-
-
-};
 
 
 /**
@@ -233,7 +218,6 @@ function draw() {
   switch (spelStatus) {
     case SPELEN:
       beweegBuis();
-      beweegKogel();
       beweegSpeler();
       
       if (checkBuisGeraakt()) {
@@ -248,7 +232,6 @@ function draw() {
 
       tekenVeld();
       tekenBuizen();
-      tekenKogel(kogelX, kogelY);
       tekenSpeler(spelerX, spelerY);
 
       if (checkGameOver()) {
