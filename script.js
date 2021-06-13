@@ -33,6 +33,12 @@ var buisX3 = 1200+600;   // x-positie van vijand
 var buisY3 = 0;   // y-positie van vijand
 var buisX4 = 1200+900;   // x-positie van vijand
 var buisY4 = 0;   // y-positie van vijand
+var buisX5 = 1200+1200;   // x-positie van vijand
+var buisY5 = 0;     // y-positie van vijand
+var buisX6 = 1200+1500;   // x-positie van vijand 
+var buisY6 = 0;     // y-positie van vijand
+
+
 var buizenX = [1100,1200,1700,2200];
 var buizenY = [20,210,30,90]
 
@@ -68,6 +74,12 @@ var tekenVeld = function () {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
+
+ /*1. What do I want to repeat? 
+   2. What do I want to change each time? 
+   3. How long should we repeat?
+ */
+
 var tekenBuizen = function() {
     // eerste buis
     fill(0,0,0);
@@ -83,17 +95,18 @@ var tekenBuizen = function() {
     rect(buisX3, buisY3+450, 50, 300
      );
      //vierde buis
+     fill(0,0,0);
     rect(buisX4, buisY4+20, 50, 300);
     rect(buisX4, buisY4+550, 50, 200);
-
-for(var j=0;j<buizenY.length;j=j+1){
-for (var i=0; i<buizenX.length; i=i+1) {
-  fill("red")
-    rect(buizenX[i], buizenY[j], 50, 300);
-    rect(buizenX[i], buizenY[j]+300, 50, 300);
-}
-}
-};
+     //vijfde buis 
+     fill(0,0,0);
+     rect(buisX5, buisY5+20, 50, 350);
+     rect(buisX5, buisY5+650, 50, 100);
+     //zesde buis
+     fill(0,0,0);
+     rect(buisX6, buisY6+20, 50, 450);
+     rect(buisX6, buisY6+750, 50, 50);
+     };
 
 
 
@@ -131,7 +144,14 @@ var beweegBuis = function() {
     if(buisX4>-1000){
     buisX4=buisX4-5
   }
-  
+    if(buisX5>-1000){
+    buisX5=buisX5-5
+    }
+    if(buisX6>-1000){
+      buisX6=buisX6-5
+    };
+    
+
   for (var i=0; i<buizenX.length; i=i+1) {
     if(buizenX[i]>-1000){
     buizenX[i]=buizenX[i]-5
